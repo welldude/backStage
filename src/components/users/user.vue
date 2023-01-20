@@ -37,8 +37,8 @@
         <el-table-column label="角色" prop="role_name"> </el-table-column>
         <el-table-column label="状态">
           <!-- 作用域插槽会覆盖掉prop,prop就是子组件table-column的slot默认显示内容。table-column就是
-					子组件，其内部用solt标签绑定了一个:row="userlist"插槽，然后父组件el-table使用每一个子组件table-column的数据
-					来显示不同的效果
+					子组件，其内部用slot标签绑定了一个:row="userlist"插槽，然后父组件el-table使用每一个子组件table-column的数据
+					来显示不同的效果，a就代表的userList，mg_state是userList数组每项的mg_state属性
 					 -->
           <template v-slot="a">
             <el-switch
@@ -365,7 +365,7 @@ export default {
           }
         )
 
-        if (res.meta.status !== 200) {
+        if (res.meta.status !== 200) { 
           return this.$message.error('更新用户信息失败！')
         }
 
