@@ -75,6 +75,6 @@ router.beforeEach((to, from, next) => {
 	if (!tokenStr) next('/login')
 	next()
 })
-// 1.27
+// 1.277
 
 export default router
