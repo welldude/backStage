@@ -13,7 +13,7 @@ export default {
 	 Home
  }
 }
-// 1.21
+// 1.24
 </script>
 
 <style>
